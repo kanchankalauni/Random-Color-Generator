@@ -15,17 +15,18 @@ const randomColor = () => {
     return color
 }
 
-let hexVal
-const changingColor = () => {
-    hexVal = randomColor()
-    body.style.backgroundColor = hexVal
+let changingColor = () => {
+    body.style.backgroundColor = randomColor()
 }
 
 let startBgColor
 startChangingColor.addEventListener('click', () => {
-    startBgColor = setInterval(changingColor, 1000)
+    if (!startBgColor) {
+        startBgColor = setInterval(changingColor, 1000)
+    }
 })
 
 stopChangingColor.addEventListener('click', () => {
     clearInterval(startBgColor)
+    startBgColor = null
 })
