@@ -1,6 +1,7 @@
 const startChangingColor = document.getElementById('start')
 const stopChangingColor = document.getElementById('stop')
-let body = document.querySelector('body')
+// let body = document.querySelector('body')
+let body = document.querySelector('#wrapper')
 
 // Generate a random color
 
