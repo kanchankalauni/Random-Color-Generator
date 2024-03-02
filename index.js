@@ -21,12 +21,12 @@ let changingColor = () => {
 
 let startBgColor
 startChangingColor.addEventListener('click', () => {
-    if (!startBgColor) {
+    // if (!startBgColor) {
         startBgColor = setInterval(changingColor, 1000)
-    }
+    // }
 })
 
 stopChangingColor.addEventListener('click', () => {
     clearInterval(startBgColor)
-    startBgColor = null
+    // startBgColor = null
 })
